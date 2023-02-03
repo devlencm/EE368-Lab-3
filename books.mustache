@@ -1,1 +1,29 @@
 {{! TODO: UI section displaying book should be displayed here using mustache template }}
+<div class="content">
+    <div class="row">
+        <?php foreach ($books as $book): ?>
+        {{! {{#books}}
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                <div class="card">
+                    <img class="card-img-top" height="160px" style="object-fit: cover; object-position: center"
+                         src="https://raw.githubusercontent.com/benoitvallon/100-best-books/master/static/<?php echo $book->imageLink ?>"
+                         alt="<?php echo $book->title ?>">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                        <?php echo $book->title ?>
+                        </h5>
+                        <p class="card-text">
+                            By <?php echo $book->author ?>
+                            from <?php echo $book->country ?>,
+                            written in <?php echo $book->language ?> language
+                            with <?php echo $book->pages ?> number of pages.<br/>
+                            Published on <?php echo $book->year ?>
+                        </p>
+                        <a target="_blank" href="<?php echo $book->link ?>" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+            </div>
+        {{! {{/books}}
+        <?php endforeach ?>
+    </div>
+</div>
