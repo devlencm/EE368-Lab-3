@@ -1,7 +1,4 @@
 <?php
-//Ideally this function suppose to fetch data from database
-//But for simplicity, we are going to use a simple json file
-
 require_once('Mustache/Autoloader.php');
 Mustache_Autoloader::register();
 
@@ -10,4 +7,3 @@ $mustache = new Mustache_Engine(array(
 ));
 $template = $mustache->loadTemplate('page');
 echo $template->render();
-?>

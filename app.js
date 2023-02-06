@@ -1,4 +1,3 @@
-
 src="https://unpkg.com/mustache"
 src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
 
@@ -14,8 +13,6 @@ function fetchData() {
             renderBooks(resp['data']);
         });
     });
-    // Using the core $.ajax() method
-    //var $target=$("#target");
 
 }
 function renderBooks(booksData) {
